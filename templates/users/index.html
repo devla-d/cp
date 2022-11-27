@@ -1,0 +1,87 @@
+{% extends 'layouts/users.html' %}
+<!---->
+{% block title %} Dashboard {% endblock title %}<!---->
+<!---->
+{% block styles %}
+<style></style>
+{% endblock styles %} {% block content %}
+<div class="row">
+  <div class="col-lg-4">
+    <h3 class="wel-txt mb-4">Hi,Welcome Back !</h3>
+  </div>
+</div>
+<div class="container">
+  <div class="user-statistic">
+    <div class="user-statistic__item">
+      <div class="user-statistic__card">
+        <div class="user-statistic__icon st1--icon"></div>
+        <div class="user-statistic__value">
+          <span> $<b>{{user.balance}}</b> </span>
+        </div>
+        <div class="user-statistic__title">Total Balance</div>
+      </div>
+    </div>
+    <div class="user-statistic__item">
+      <div class="user-statistic__card">
+        <div class="user-statistic__icon st2--icon"></div>
+        <div class="user-statistic__value" id="load1">
+          <span> $<b>{{user.deposit_balance}}</b> </span>
+        </div>
+        <div class="user-statistic__title">deposits Balance</div>
+      </div>
+    </div>
+    <div class="user-statistic__item">
+      <div class="user-statistic__card">
+        <div class="user-statistic__icon st3--icon"></div>
+        <div class="user-statistic__value" id="load2">
+          <span> $<b>{{ earnings }}</b> </span>
+        </div>
+        <div class="user-statistic__title">Earnings</div>
+      </div>
+    </div>
+    <div class="user-statistic__item">
+      <div class="user-statistic__card">
+        <div class="user-statistic__icon st4--icon"></div>
+        <div class="user-statistic__value" id="load3">
+          <span> $<b>{{user.total_withdraw}}</b> </span>
+        </div>
+        <div class="user-statistic__title">Total withdrawn</div>
+      </div>
+    </div>
+  </div>
+  <div class="row justify-content-center">
+    <div class="col-lg-4">
+      <div class="auth-info-card card mb-5">
+        <div>
+          <div class="auth-info-card-header">
+            <h4 class="text-white">Activities</h4>
+          </div>
+          <div class="auth-info-card-body">
+            {% for log in logs %}
+            <div class="auth-info-item">
+              <div
+                class="d-flex"
+                style="align-items: center; justify-content: space-between"
+              >
+                <h5 class="text-white">Web</h5>
+
+                <div style="margin-top: -11px">
+                  <!-- <h5 class="text-gray-500">{{log.city}}</h5> -->
+                  <p class="ml-auto text-success" style="margin: 10px 0">
+                    {{log.log_ip}}
+                  </p>
+                  <p class="ml-auto text-gray-500" style="margin: 10px 0">
+                    {{log.date}}
+                  </p>
+                </div>
+              </div>
+            </div>
+            {% endfor %}
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+{% endblock content %} {% block scripts %} {% endblock scripts %}

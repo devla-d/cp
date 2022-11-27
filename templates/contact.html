@@ -1,0 +1,133 @@
+{% extends "layouts/home.html" %} {% block content %}
+
+<div class="inner-banner-area">
+  <div id="particles-js"></div>
+  <div class="container">
+    <div class="row">
+      <div class="col-lg-12">
+        <h1 class="title"><span>Contact Us</span></h1>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="contact-area padding-bottom">
+  <div class="container">
+    <div class="row">
+      <div class="col-lg-12">
+        <div class="main-page contact_wrapper">
+          <div class="row">
+            <div class="col-lg-8">
+              <div class="contact-form-area">
+                <h3 class="section-title">Contact With Us</h3>
+                <p>You can contact us, We are always available for you.</p>
+                <form method="post" action="#">
+                  <div class="row">
+                    <div class="col-md-12">
+                      <input
+                        name="name"
+                        type="text"
+                        placeholder="Your Name"
+                        class="form-control"
+                        value=""
+                        required
+                      />
+                    </div>
+                    <div class="col-md-12">
+                      <input
+                        name="email"
+                        type="text"
+                        placeholder="Enter E-Mail Address"
+                        class="form-control"
+                        value=""
+                        required
+                      />
+                    </div>
+
+                    <div class="col-md-12">
+                      <input
+                        name="subject"
+                        type="text"
+                        placeholder="Write your subject"
+                        class="form-control"
+                        value=""
+                        required
+                      />
+                    </div>
+                  </div>
+                  <textarea
+                    name="message"
+                    wrap="off"
+                    placeholder="Write your message"
+                    class="form-control"
+                  ></textarea>
+                  <input
+                    disabled
+                    type="submit"
+                    value="Use the live support"
+                    class="btn btn-default website-color btn-lg mt-3"
+                  />
+                </form>
+              </div>
+            </div>
+            <div class="col-lg-4">
+              <div class="contact-social-area">
+                <h3 class="section-title">Contact</h3>
+                <div class="mail-area">
+                  <span class="support">
+                    <i class="fas fa-phone"></i>
+                    <a href="tel:PLEASE CONTACT SUPPORT">
+                      PLEASE CONTACT SUPPORT
+                    </a>
+                  </span>
+
+                  <span class="support mt-1">
+                    <i class="fas fa-envelope"></i
+                    ><a href="javascript:void(0)">support@{{domain}}</a>
+                  </span>
+
+                  <span class="support mt-1"
+                    ><i class="fas fa-location-arrow"></i
+                    ><a href="javascript:void(0)">
+                      2862 Renwick Drive, Portland Pennsylvania, USA.</a
+                    >
+                  </span>
+                </div>
+                <h3 class="section-title">Follow Us</h3>
+                <ul class="social-links">
+                  <li>
+                    <a href="#" target="_blank" title="Linkedin"
+                      ><i class="fab fa-linkedin-in"></i
+                    ></a>
+                  </li>
+                  <li>
+                    <a href="#" target="_blank" title="Youtbe"
+                      ><i class="fab fa-youtube"></i
+                    ></a>
+                  </li>
+                  <li>
+                    <a href="#" target="_blank" title="Facebok"
+                      ><i class="fab fa-facebook"></i
+                    ></a>
+                  </li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="sec-area">
+  <div class="container">
+    <div class="row">
+      <div class="col-lg-12">
+        <div class="sec"></div>
+      </div>
+    </div>
+  </div>
+</div>
+
+{% endblock content %}

@@ -1,0 +1,470 @@
+<!DOCTYPE html>
+<html lang="en">
+  <meta http-equiv="content-type" content="text/html;charset=UTF-8" />
+
+  <head>
+    <script
+      src="https://kit.fontawesome.com/85f1fe11bb.js"
+      crossorigin="anonymous"
+    ></script>
+
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>{% block title %} {% endblock title %} | {{doamin}}</title>
+    <!-- favicon -->
+    <link
+      rel="icon"
+      href="/assets/images/logoIcon/favicon.png"
+      type="image/x-icon"
+    />
+    <link
+      rel="shortcut icon"
+      type="image/png"
+      href="/assets/images/logoIcon/favicon.png"
+    />
+    <meta name="title" content="{{ domain }}- Home" />
+    <meta
+      name="description"
+      content="An investment company is a corporation or trust engaged in the business of investing pooled capital into financial securities. Investment companies make profits by buying and selling shares, property, bonds, cash, other funds and 
+other assets."
+    />
+    <meta
+      name="keywords"
+      content="An investment company is a corporation or trust engaged in the business of investing pooled capital into financial securities. Investment companies make profits by buying and selling shares,property,bonds,cash,A reliable and professional company where you can invest your money and we will utilize it and offer you the best returns of your investment. ..."
+    />
+    <!-- Apple Stuff -->
+    <link rel="apple-touch-icon" href="/assets/images/logoIcon/logo.png" />
+    <meta name="apple-mobile-web-app-capable" content="yes" />
+    <meta name="apple-mobile-web-app-status-bar-style" content="black" />
+    <meta name="apple-mobile-web-app-title" content="{{ domain }}- Home" />
+    <!-- Google / Search Engine Tags -->
+    <meta itemprop="name" content="{{ domain }}- Home" />
+    <meta itemprop="description" content="" />
+    <meta
+      itemprop="image"
+      content="/assets/images/seo/614db76373ecb1632483171.png"
+    />
+    <!-- Facebook Meta Tags -->
+    <meta property="og:type" content="website" />
+    <meta
+      property="og:title"
+      content="A reliable and professional company where you can invest your money and we will utilize it and offer you the best returns of your investment. ..."
+    />
+    <meta
+      property="og:description"
+      content="An investment company is a corporation or trust engaged in the business of investing pooled capital into financial securities. Investment companies make profits by buying and selling shares, property, bonds, cash, other funds and 
+other assets."
+    />
+    <meta
+      property="og:image"
+      content="/assets/images/seo/614db76373ecb1632483171.png"
+    />
+    <meta property="og:image:type" content="image/png" />
+    <meta property="og:image:width" content="600" />
+    <meta property="og:image:height" content="315" />
+    <meta property="og:url" content="index.html" />
+    <!-- Twitter Meta Tags -->
+    <meta name="twitter:card" content="summary_large_image" />
+
+    <!-- bootstrap css link -->
+    <link
+      rel="stylesheet"
+      href="/assets/templates/basic/css/bootstrap.min.css"
+    />
+    <!-- animate.css -->
+    <link rel="stylesheet" href="/assets/templates/basic/css/animate.css" />
+    <link rel="stylesheet" href="/assets/templates/basic/css/odometer.css" />
+    <!-- owl carousel css link -->
+    <link
+      rel="stylesheet"
+      href="/assets/templates/basic/css/owl.carousel.min.css"
+    />
+    <link rel="stylesheet" href="/assets/admin/css/iziToast.min.css" />
+    <!-- main style css link -->
+    <link
+      rel="stylesheet"
+      href="/assets/templates/basic/css/styled207d207.css?color=0b8915&amp;secondColor=2ecc71"
+    />
+    <style>
+      .plan-item {
+        padding-top: 10px;
+        width: 406px;
+      }
+    </style>
+
+    <style type="text/css">
+      iframe.goog-te-banner-frame {
+        display: none !important;
+      }
+    </style>
+
+    <style type="text/css">
+      body {
+        position: static !important;
+        top: 0px !important;
+      }
+    </style>
+
+    <style type="text/css">
+      .goog-logo-link {
+        display: none !important;
+      }
+
+      .goog-te-gadget {
+        color: transparent !important;
+      }
+    </style>
+
+    <script type="text/javascript">
+      function googleTranslateElementInit() {
+        new google.translate.TranslateElement(
+          {
+            pageLanguage: "en",
+          },
+          "google_translate_element"
+        );
+      }
+    </script>
+
+    <script
+      type="text/javascript"
+      src="//translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"
+    ></script>
+  </head>
+
+  <body class="body-page">
+    <header class="header-section">
+      <div class="header-top">
+        <div class="container">
+          <div class="row align-items-center">
+            <div class="col-lg-6">
+              <div class="call-area">
+                <span class="phone"
+                  ><i class="fas fa-phone"></i
+                  ><a href="tel:PLEASE CONTACT SUPPORT"
+                    >PLEASE CONTACT SUPPORT</a
+                  ></span
+                >
+                <span class="support"
+                  ><i class="fas fa-envelope"></i
+                  ><a href="mailto:support@{{ domain }}"
+                    >support@{{ domain }}</a
+                  ></span
+                >
+              </div>
+            </div>
+            <div class="col-lg-4 pr-0">
+              <div class="language-select-area"></div>
+            </div>
+            <div class="col-lg-2 pl-0">
+              <ul class="social-links">
+                <li>
+                  <a href="#" target="_blank" title="Linkedin"
+                    ><i class="fab fa-linkedin-in"></i
+                  ></a>
+                </li>
+                <li>
+                  <a href="#" target="_blank" title="Youtbe"
+                    ><i class="fab fa-youtube"></i
+                  ></a>
+                </li>
+                <li>
+                  <a href="#" target="_blank" title="Facebok"
+                    ><i class="fab fa-facebook"></i
+                  ></a>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="header-bottom">
+        <div class="container-fluid">
+          <nav class="navbar navbar-expand-lg p-0 mx-5">
+            <a class="site-logo site-title" href="/">
+              <img
+                src="/assets/images/logoIcon/logo.png"
+                class="logo-max"
+                alt="<span>Capital Crypto</span> Gains"
+              />
+              <span class="site-name"><span>Capital Crypto</span> Gains</span>
+            </a>
+            <button
+              class="navbar-toggler ml-auto"
+              type="button"
+              data-toggle="collapse"
+              data-target="#navbarSupportedContent"
+              aria-controls="navbarSupportedContent"
+              aria-expanded="false"
+              aria-label="Toggle navigation"
+            >
+              <span class="fas fa-bars"></span>
+            </button>
+
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+              <ul class="navbar-nav main-menu ml-auto mr-2 mr-xl-5">
+                <li><a href="/">Home</a></li>
+                <li><a href="{% url 'plans' %}">Plans</a></li>
+                <li><a href="{% url 'blog' %}">Blog</a></li>
+                <li><a href="{% url 'contact' %}">Contact</a></li>
+              </ul>
+              <div class="header-action d-flex flex-wrap align-items-center">
+                <a
+                  href="{% url 'login' %}"
+                  class="btn btn-default website-color mr-1"
+                  >Login</a
+                >
+                <a
+                  href="{% url 'register' %}"
+                  class="btn btn-default website-color mr-1"
+                  >Register</a
+                >
+              </div>
+            </div>
+          </nav>
+        </div>
+      </div>
+
+      <div id="google_translate_element"></div>
+    </header>
+
+    {% block content %} {% endblock content %}
+
+    <!-- Modal -->
+    <div
+      class="modal fade"
+      id="depoModal"
+      tabindex="-1"
+      role="dialog"
+      aria-hidden="true"
+    >
+      <div class="modal-dialog" role="document">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title" id="ModalLabel">Need Sign In</h5>
+          </div>
+          <form action="https://{{ domain }}/user/plans" method="post">
+            <input
+              type="hidden"
+              name="_token"
+              value="WkOTO14FUL9BN69T59gCmGikQHNQA7VR8Vf4CUYM"
+            />
+
+            <div class="modal-footer">
+              <a
+                href="login/index.html"
+                type="button"
+                class="btn btn-success custom-success"
+                >Please, Signin your account at first</a
+              >
+            </div>
+          </form>
+        </div>
+      </div>
+    </div>
+
+    <section class="footer-area">
+      <div class="container">
+        <div class="footer-nav">
+          <div class="row justify-content-center">
+            <div class="col-lg-7 text-center">
+              <nav class="navbar navbar-expand-lg p-0">
+                <div class="footer-menu">
+                  <ul class="navbar-nav mr-auto">
+                    <li><a href="/">Home</a></li>
+                    <li>
+                      <a href="{% url 'privacy' %}"> Privacy </a>
+                    </li>
+                    <li><a href="{% url 'rules' %}">Rules</a></li>
+                  </ul>
+                </div>
+              </nav>
+            </div>
+          </div>
+        </div>
+        <div class="row">
+          <div class="col-lg-12 text-center">
+            <a href="/" class="text-center">
+              <img
+                src="/assets/images/logoIcon/logo.png"
+                class="logo-max"
+                alt="logo"
+              />
+            </a>
+            <div class="footer-text mt-4">
+              <p>
+                <span style="font-family: 'Open Sans', sans-serif"
+                  >Join the team of our holding company and take part in
+                  investment construction</span
+                ><br />
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <div class="copiright">
+      <div class="container">
+        <div class="row">
+          <div class="col-lg-9">
+            <p>
+              &copy; 2022 {{ domain }} . Powered by {{ domain }} Limited C86883
+              - All rights reserved
+            </p>
+          </div>
+          <div class="col-lg-3">
+            <ul class="social-links footer-social">
+              <li>
+                <a href="#" target="_blank" title="Linkedin"
+                  ><i class="fab fa-linkedin-in"></i
+                ></a>
+              </li>
+              <li>
+                <a href="#" target="_blank" title="Youtbe"
+                  ><i class="fab fa-youtube"></i
+                ></a>
+              </li>
+              <li>
+                <a href="#" target="_blank" title="Facebok"
+                  ><i class="fab fa-facebook"></i
+                ></a>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- jquery -->
+    <script src="/assets/templates/basic/js/jquery-3.3.1.min.js"></script>
+    <!-- migarate-jquery -->
+    <script src="/assets/templates/basic/js/jquery-migrate-3.0.0.js"></script>
+    <!-- bootstrap js -->
+    <script src="/assets/templates/basic/js/bootstrap.min.js"></script>
+    <!-- owl-carousel js -->
+    <script src="/assets/templates/basic/js/owl.carousel.min.js"></script>
+    <!-- particle js -->
+    <script src="/assets/templates/basic/js/viewport.jquery.js"></script>
+    <script src="/assets/templates/basic/js/odometer.min.js"></script>
+    <script src="/assets/templates/basic/js/particles.js"></script>
+    <!-- main -->
+    <script src="/assets/templates/basic/js/main.js"></script>
+
+    <script src="/assets/admin/js/iziToast.min.js"></script>
+
+    <script>
+      (function ($) {
+        "use strict";
+        $(document).ready(function () {
+          $("#changePlan").on("change", function () {
+            var planId = $("#changePlan option:selected").val();
+            var investInput = $(".invest-input").val();
+            var profitInput = $(".profit-input").val("");
+
+            $(".period").text("");
+
+            if (investInput != "" && planId != null) {
+              ajaxPlanCalc(planId, investInput);
+            }
+          });
+
+          $(".invest-input").on("change", function () {
+            var planId = $("#changePlan option:selected").val();
+            var investInput = $(this).val();
+            var profitInput = $(".profit-input").val("");
+            $(".period").text("");
+            if (investInput != "" && planId != null) {
+              ajaxPlanCalc(planId, investInput);
+            }
+          });
+        });
+      })(jQuery);
+
+      function ajaxPlanCalc(planId, investInput) {
+        $.ajax({
+          url: "https://{{ domain }}/planCalculator",
+          type: "post",
+          data: {
+            planId,
+            investInput,
+          },
+          success: function (response) {
+            var alertStatus = "1";
+            if (response.errors) {
+              if (alertStatus == "1") {
+                iziToast.error({
+                  message: response.errors,
+                  position: "topRight",
+                });
+              } else if (alertStatus == "2") {
+                toastr.error(response.errors);
+              }
+            }
+
+            $(".profit-input").val(response.interest_amount);
+            $(".period").text(response.interestValidity);
+          },
+        });
+      }
+    </script>
+
+    <script>
+      $(document).ready(function () {
+        $(".investButton").on("click", function () {
+          var data = $(this).data("resource");
+          var symbol = "$";
+          var currency = "USD";
+
+          if (data.fixed_amount == "0") {
+            $(".investAmountRenge").text(
+              `Invest: ${symbol}${data.minimum} - ${symbol}${data.maximum}`
+            );
+            $(".fixedAmount").val("");
+            $("#fixedAmount").attr("readonly", false);
+          } else {
+            $(".investAmountRenge").text(
+              `Invest: ${symbol}${data.fixed_amount}`
+            );
+            $(".fixedAmount").val(data.fixed_amount);
+
+            $("#fixedAmount").attr("readonly", true);
+          }
+
+          if (data.interest_status == "1") {
+            $(".interestDetails").html(
+              `<strong> Interest: ${data.interest} % </strong>`
+            );
+          } else {
+            $(".interestDetails").html(
+              `<strong> Interest: ${data.interest} ${currency}  </strong>`
+            );
+          }
+          if (data.lifetime_status == "0") {
+            $(".interestValidaty").html(
+              `<strong>  Per ${data.times} Hours ,  ${data.repeat_time} Times</strong>`
+            );
+          } else {
+            $(".interestValidaty").html(
+              `<strong>  Per ${data.times} Hours,  Lifetime </strong>`
+            );
+          }
+
+          $(".planName").text(data.name);
+          $(".plan_id").val(data.id);
+        });
+      });
+    </script>
+
+    <script>
+      $(document).on("change", ".langSel", function () {
+        window.location.href =
+          "https://{{ domain }}/change-lang/" + $(this).val();
+      });
+    </script>
+  </body>
+
+  <!-- Mirrored from {{ domain }}/ by HTTrack Website Copier/3.x [XR&CO'2014], Tue, 22 Nov 2022 07:24:13 GMT -->
+</html>
