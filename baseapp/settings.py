@@ -23,7 +23,6 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 environ.Env.read_env(os.path.join(BASE_DIR, ".env"))
 
 
-
 # Quick-start development settings - unsuitable for production
 # See https://docs.djangoproject.com/en/4.0/howto/deployment/checklist/
 
@@ -33,7 +32,7 @@ SECRET_KEY = env("SECRET_KEY")
 # SECURITY WARNING: don't run with debug turned on in production http://127.0.0.1:8000/!
 
 # print("DEBUG", env.bool("DEBUG"))
-DEBUG = False
+DEBUG = True
 
 ALLOWED_HOSTS = env.list("ALLOWED_HOSTS")
 
@@ -130,8 +129,8 @@ USE_TZ = True
 # Static files (CSS, JavaScript, Images)
 # https://docs.djangoproject.com/en/4.0/howto/static-files/STATIC_URL = "assets/"
 STATIC_URL = "assets/"
-#STATICFILES_DIRS = (os.path.join(BASE_DIR, "assets"),)
-STATIC_ROOT = "/home/capiwwth/public_html/assets/"
+STATICFILES_DIRS = (os.path.join(BASE_DIR, "assets"),)
+# STATIC_ROOT = "/home/capiwwth/public_html/assets/"
 
 # Default primary key field type
 # https://docs.djangoproject.com/en/4.0/ref/settings/#default-auto-field
@@ -142,7 +141,7 @@ LOGIN_REDIRECT_URL = "dashboard"
 SESSION_EXPIRE_AT_BROWSER_CLOSE = True
 CRISPY_TEMPLATE_PACK = "bootstrap4"
 
-#EMAIL_BACKEND = "django.core.mail.backends.console.EmailBackend"
+# EMAIL_BACKEND = "django.core.mail.backends.console.EmailBackend"
 
 EMAIL_BACKEND = env("EMAIL_BACKEND")
 EMAIL_HOST = env("EMAIL_HOST")
