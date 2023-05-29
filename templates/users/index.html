@@ -1,13 +1,13 @@
 {% extends 'layouts/users.html' %}
 <!---->
-{% block title %} Dashboard {% endblock title %}<!---->
+{% block title %} ផ្ទាំងគ្រប់គ្រង {% endblock title %}<!---->
 <!---->
 {% block styles %}
 <style></style>
 {% endblock styles %} {% block content %}
 <div class="row">
   <div class="col-lg-4">
-    <h3 class="wel-txt mb-4">Hi,Welcome Back !</h3>
+    <h3 class="wel-txt mb-4">សួស្តី សូមស្វាគមន៍ការត្រឡប់មកវិញ!</h3>
   </div>
 </div>
 <div class="container">
@@ -18,7 +18,7 @@
         <div class="user-statistic__value" id="load1">
           <span> $<b>{{user.deposit_balance}}</b> </span>
         </div>
-        <div class="user-statistic__title">Deposits Balance</div>
+        <div class="user-statistic__title">សមតុល្យប្រាក់បញ្ញើ</div>
       </div>
     </div>
     <div class="user-statistic__item">
@@ -27,7 +27,7 @@
         <div class="user-statistic__value" id="load2">
           <span> $<b>{{ earnings }}</b> </span>
         </div>
-        <div class="user-statistic__title">Earnings</div>
+        <div class="user-statistic__title">ប្រាក់ចំណូល</div>
       </div>
     </div>
     <div class="user-statistic__item">
@@ -36,7 +36,7 @@
         <div class="user-statistic__value">
           <span> $<b>{{user.balance}}</b> </span>
         </div>
-        <div class="user-statistic__title">Total Balance</div>
+        <div class="user-statistic__title">សមតុល្យសរុប</div>
       </div>
     </div>
 
@@ -46,7 +46,7 @@
         <div class="user-statistic__value" id="load3">
           <span> $<b>{{user.total_withdraw}}</b> </span>
         </div>
-        <div class="user-statistic__title">Total withdrawn</div>
+        <div class="user-statistic__title">ការដកសរុប</div>
       </div>
     </div>
   </div>
@@ -55,7 +55,7 @@
       <div class="auth-info-card card mb-5">
         <div>
           <div class="auth-info-card-header">
-            <h4 class="text-white">Activities</h4>
+            <h4 class="text-white">សកម្មភាព</h4>
           </div>
           <div class="auth-info-card-body">
             {% for log in logs %}

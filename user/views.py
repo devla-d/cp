@@ -50,10 +50,10 @@ def withdrawal_(request):
             user.balance -= amount
             user.save()
             transaction.save()
-            messages.success(request, ("Withdrawal Placed !"))
+            messages.success(request, ("ការដកប្រាក់ត្រូវបានដាក់"))
             return redirect("withdrawal")
         else:
-            messages.warning(request, ("Insufficient Funds!"))
+            messages.warning(request, ("ថវិកាមិនគ្រប់គ្រាន់!"))
             return redirect("withdrawal")
 
     return render(request, "users/withdrawal.html")
