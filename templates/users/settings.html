@@ -1,12 +1,12 @@
 {% extends 'layouts/users.html' %} {% load crispy_forms_tags %}<!---->
-{% block title %} Settings {% endblock title %} {% block styles %}
+{% block title %} ការកំណត់ {% endblock title %} {% block styles %}
 <style></style>
 {% endblock styles %} {% block content %}
 <div class="d-sm-flex align-items-center justify-content-between mb-4">
-  <h1 class="h3 mb-0 text-gray-800">Settings</h1>
+  <h1 class="h3 mb-0 text-gray-800">ការកំណត់</h1>
   <ol class="breadcrumb">
-    <li class="breadcrumb-item"><a href="/">Home</a></li>
-    <li class="breadcrumb-item active" aria-current="page">settings</li>
+    <li class="breadcrumb-item"><a href="/">ផ្ទះ</a></li>
+    <li class="breadcrumb-item active" aria-current="page">ការកំណត់</li>
   </ol>
 </div>
 
@@ -15,14 +15,14 @@
     <ul class="nav nav-tabs justify-content-center" id="myTab" role="tablist">
       <li class="nav-item">
         <a class="nav-link active" href="#settings" aria-controls="settings"
-          >Profile Settings</a
+          >ការកំណត់ប្រវត្តិរូប</a
         >
       </li>
       <li class="nav-item">
         <a
           class="nav-link btn btn-primary ml-2 mb-2"
           href="{% url 'change_password' %}"
-          >Security</a
+          >សន្តិសុខ</a
         >
       </li>
     </ul>

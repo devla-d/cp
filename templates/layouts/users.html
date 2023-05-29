@@ -79,37 +79,37 @@
             <li>
               <a href="{% url 'dashboard' %}"
                 ><i class="fas fa-fw fa-tachometer-alt"></i>
-                <span>Dashbaord</span>
+                <span>ផ្ទាំងគ្រប់គ្រង</span>
               </a>
             </li>
 
             <li>
               <a href="{% url 'withdrawal' %}">
                 <i class="far fa-fw fa-credit-card"></i>
-                <span>Withdraw</span></a
+                <span>ការដកប្រាក់</span></a
               >
             </li>
             <li>
               <a href="{% url 'transactions_' %}">
                 <i class="fas fa-fw fa-history"></i>
-                <span>Transactions</span>
+                <span>ប្រតិបត្តិការ</span>
               </a>
             </li>
 
             <li>
               <a href="/#referrals" id="open-ref">
                 <i class="fas fa-fw fa-users"></i>
-                <span>Referrals</span>
+                <span>ការណែនាំ</span>
               </a>
             </li>
             <li>
               <a href="{% url 'settings_' %}">
-                <i class="fas fa-fw fa-cog fa-"></i> <span>Settings</span></a
+                <i class="fas fa-fw fa-cog fa-"></i> <span>ការកំណត់</span></a
               >
             </li>
             <li>
               <a href="{% url 'sign_out' %}">
-                <i class="fas fa-fw fa-sign-out-alt"></i><span>Logout</span>
+                <i class="fas fa-fw fa-sign-out-alt"></i><span>ចាកចេញ</span>
               </a>
             </li>
           </ul>
@@ -185,7 +185,7 @@
     <div class="notification-dialog" role="document">
       <div class="noti-content">
         <div class="noti-dialog-header">
-          <h3>Notifications</h3>
+          <h3>ការជូនដំណឹង</h3>
           <span>
             <i class="fa fa-times close-notification"></i>
           </span>
@@ -217,18 +217,18 @@
         <div class="ref-icon animate" style="display: block">
           <i class="fas fa-check"></i>
         </div>
-        <h2>Your referrals!</h2>
+        <h2>ការណែនាំរបស់អ្នក!</h2>
         <ul class="ref-menu">
           <li>
-            <h3>No of Referrals</h3>
+            <h3>គ្មានឯកសារយោង</h3>
             <p>{{referral}}</p>
           </li>
           <li>
-            <h3>Referral Bonus</h3>
+            <h3>ប្រាក់រង្វាន់ណែនាំ</h3>
             <p>${{referral_bonus}}</p>
           </li>
           <li>
-            <label for="">Referral Link</label>
+            <label for="">តំណយោង</label>
             <div class="input-group mb-3">
               <input
                 type="text"
@@ -246,8 +246,8 @@
                   onclick="copyFunction('myInput')"
                   onmouseout="outFunc()"
                 >
-                  <span class="tooltiptext" id="myTooltip">Copy </span>
-                  <span class="txt">Copy</span>
+                  <span class="tooltiptext" id="myTooltip">ចម្លង </span>
+                  <span class="txt">ចម្លង</span>
                 </button>
               </div>
             </div>

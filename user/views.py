@@ -74,7 +74,7 @@ def settings_(request):
             u_form = UserUpdateForm(request.POST, instance=user)
             if u_form.is_valid():
                 u_form.save()
-                messages.success(request, ("Account Updated !"))
+                messages.success(request, ("ធ្វើបច្ចុប្បន្នភាពគណនី!"))
                 return redirect("settings_")
         # elif submit == "ChangePassword":
         #     p_form = PasswordChangeForm(request.POST,instance=user)
@@ -85,7 +85,7 @@ def settings_(request):
         #         messages.success(request, f'Password Change')
         #         return redirect('settings_')
         else:
-            messages.warning(request, f"UNKNOWN ERROR OCCURED !")
+            messages.warning(request, f"កំហុសដែលមិនស្គាល់បានកើតឡើង!")
             return redirect("settings_")
 
     else:
@@ -103,10 +103,10 @@ def change_password_view(request):
             password1 = p_form.cleaned_data["password1"]
             user.set_password(password1)
             user.save()
-            messages.success(request, f"Password Change")
+            messages.success(request, f"ការផ្លាស់ប្តូរពាក្យសម្ងាត់")
             return redirect("change_password")
         else:
-            messages.warning(request, f"Passwords don't match")
+            messages.warning(request, f"ពាក្យសម្ងាត់មិនត្រូវគ្នាទេ។")
             return redirect("change_password")
     else:
         p_form = PasswordChangeForm(initial={"user_id": user.id})
