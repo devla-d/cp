@@ -37,7 +37,7 @@ def reg_ister(request):
                 try:
                     old_user = Account.objects.get(unique_id=ref_code)
                 except Account.DoesNotExist:
-                    messages.warning(request, ("UNKNOWN ERROR OCCURED !"))
+                    messages.warning(request, ("កំហុសមិនស្គាល់បានកើតឡើង !"))
                     return redirect("register")
                 old_user_ref_model = Referral.objects.get(user=old_user)
                 new_user_ref_model, created = Referral.objects.get_or_create(
@@ -74,7 +74,7 @@ def reg_ister(request):
             )
             mail.content_subtype = "html"
             mail.send(fail_silently=True)
-            messages.info(request, "Account created")
+            messages.info(request, "គណនីត្រូវបានបង្កើតឡើង")
 
             return redirect("login")
     else:
@@ -102,7 +102,7 @@ def log_in(request):
                 else:
                     return redirect("dashboard")
         else:
-            messages.warning(request, ("Invalid Username Or Password."))
+            messages.warning(request, ("ឈ្មោះអ្នកប្រើ ឬពាក្យសម្ងាត់មិនត្រឹមត្រូវ។"))
             return redirect("login")
     else:
         form = LoginForm()
