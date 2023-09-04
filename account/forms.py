@@ -20,7 +20,7 @@ class RegisterForm(UserCreationForm):
             attrs={
                 "type": "text",
                 "class": "input-form",
-                "placeholder": "ឈ្មោះ​ពេញ",
+                "placeholder": "Fullname",
                 "autocomplete": False,
             }
         ),
@@ -33,7 +33,7 @@ class RegisterForm(UserCreationForm):
             attrs={
                 "type": "email",
                 "class": "input-form",
-                "placeholder": "អ៊ីមែល",
+                "placeholder": "Email",
                 "autocomplete": False,
             }
         ),
@@ -46,7 +46,7 @@ class RegisterForm(UserCreationForm):
             attrs={
                 "type": "text",
                 "class": "input-form",
-                "placeholder": "ឈ្មោះ​អ្នកប្រើប្រាស់",
+                "placeholder": "Username",
                 "autocomplete": False,
             }
         ),
@@ -60,7 +60,7 @@ class RegisterForm(UserCreationForm):
         label=" ",
         widget=forms.PasswordInput(
             attrs={
-                "placeholder": "ពាក្យសម្ងាត់",
+                "placeholder": "Password",
                 "class": "input-form",
                 "autocomplete": False,
             }
@@ -72,7 +72,7 @@ class RegisterForm(UserCreationForm):
         label="",
         widget=forms.PasswordInput(
             attrs={
-                "placeholder": "បញ្ជាក់ពាក្យសម្ងាត់",
+                "placeholder": "Comfirm Password",
                 "class": "input-form",
                 "autocomplete": False,
             }
@@ -99,7 +99,7 @@ class LoginForm(forms.ModelForm):
         label="Password",
         widget=forms.PasswordInput(
             attrs={
-                "placeholder": "ពាក្យសម្ងាត់",
+                "placeholder": "Password",
                 "class": "input-form",
             }
         ),
@@ -114,6 +114,4 @@ class LoginForm(forms.ModelForm):
             if not authenticate(
                 email=self.cleaned_data["email"], password=self.cleaned_data["password"]
             ):
-                raise forms.ValidationError(
-                    "ឈ្មោះអ្នកប្រើ និងពាក្យសម្ងាត់មិនត្រឹមត្រូវ"
-                )
+                raise forms.ValidationError("Invalid Username and Password")

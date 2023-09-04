@@ -1,6 +1,6 @@
 {% extends "layouts/auth.html" %}
 <!---->
-{% block title %} ចូលទៅក្នុងគណនីរបស់អ្នក។{% endblock title %}
+{% block title %}Login into your account {% endblock title %}
 <!---->
 {% block content %}
 <!-- login area start -->
@@ -10,24 +10,21 @@
       <form method="POST" action="">
         {% csrf_token %}
         <div class="login-form-head">
-          <h4>
-            ចូល<br />
-            Capita-Profit
-          </h4>
+          <h4>Login<br />{{ domain }}</h4>
           <p>
-            <i class="ti-arrow-right"></i>ជំរាបសួរ,
-            ចូលនិងធ្វើពាណិជ្ជកម្មជាមួយល្អបំផុត
+            <i class="ti-arrow-right"></i>Hello there, Login and Trade with the
+            best
           </p>
         </div>
 
         <div class="login-form-body">
           <div class="form-gp">
-            <label for="exampleInputEmail1">អាស័យ​ដ្ឋាន​អ៊ី​ម៉េ​ល</label>
+            <label for="exampleInputEmail1">Email address</label>
             <input type="email" name="email" id="Uemail" required />
             <i class="ti-email"></i>
           </div>
           <div class="form-gp">
-            <label for="exampleInputPassword1">ពាក្យសម្ងាត់</label>
+            <label for="exampleInputPassword1">Password</label>
             <input type="password" name="password" id="password" />
             <i class="ti-lock"></i>
           </div>
@@ -42,7 +39,7 @@
                 <label
                   class="custom-control-label"
                   for="customControlAutosizing"
-                  >ចងចាំខ្ញុំ</label
+                  >Remember Me</label
                 >
               </div>
             </div>
@@ -58,12 +55,12 @@
               style="background: orange; font-size: 15px; color: #fff"
               class="btn btn-warning"
             >
-              ដាក់ស្នើ <i class="ti-arrow-right"></i>
+              Submit <i class="ti-arrow-right"></i>
             </button>
           </div>
           <div class="form-footer text-center mt-5">
             <p class="text-muted">
-              មិនមានគណនីមែនទេ? <a href="{% url 'register' %}">ចុះ​ឈ្មោះ</a>
+              Don't have an account? <a href="{% url 'register' %}">Sign up</a>
             </p>
           </div>
         </div>

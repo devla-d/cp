@@ -6,8 +6,8 @@ from .models import Packages
 
 
 GENDER = (
-    ("បុរស", "ប្រុស"),
-    ("ស្ត្រី", "ស្រី"),
+    ("MALE", "Male"),
+    ("FEMALE", "Female"),
 )
 
 
@@ -16,17 +16,17 @@ class UserUpdateForm(forms.ModelForm):
     country = forms.CharField(
         max_length=30,
         widget=forms.TextInput(
-            attrs={"type": "text", "class": "input-form", "placeholder": "ប្រទេស"}
+            attrs={"type": "text", "class": "input-form", "placeholder": "Country"}
         ),
-        label="ប្រទេស",
+        label="Country",
         required=True,
     )
     city = forms.CharField(
         max_length=30,
         widget=forms.TextInput(
-            attrs={"type": "text", "class": "input-form", "placeholder": "ទីក្រុង"}
+            attrs={"type": "text", "class": "input-form", "placeholder": "City"}
         ),
-        label="ទីក្រុង",
+        label="City",
         required=True,
     )
     # state = forms.CharField(
@@ -44,22 +44,18 @@ class UserUpdateForm(forms.ModelForm):
     address = forms.CharField(
         max_length=30,
         widget=forms.TextInput(
-            attrs={"type": "text", "class": "input-form", "placeholder": "អាសយដ្ឋាន"}
+            attrs={"type": "text", "class": "input-form", "placeholder": "ADDRESS"}
         ),
-        label="អាសយដ្ឋាន",
+        label="Address",
         required=True,
     )
 
     zipcode = forms.CharField(
         max_length=30,
         widget=forms.TextInput(
-            attrs={
-                "type": "text",
-                "class": "input-form",
-                "placeholder": "លេខ​កូដ​តំបន់",
-            }
+            attrs={"type": "text", "class": "input-form", "placeholder": "zipcode"}
         ),
-        label="លេខ​កូដ​តំបន់",
+        label="Zipcode",
         required=True,
     )
     gender = forms.CharField(
@@ -70,21 +66,21 @@ class UserUpdateForm(forms.ModelForm):
                 "class": "input-form",
             },
         ),
-        label="ភេទ",
+        label="Gender",
         required=True,
     )
     phone = forms.CharField(
         max_length=30,
         widget=forms.TextInput(
-            attrs={"type": "tel", "class": "input-form", "placeholder": "លេខទូរសព្ទ"}
+            attrs={"type": "tel", "class": "input-form", "placeholder": "Phone Number"}
         ),
-        label="លេខទូរសព្ទ",
+        label="Phone Number",
         required=True,
     )
 
     date_of_birth = forms.CharField(
         widget=forms.TextInput(attrs={"type": "text", "class": "input-form"}),
-        label="ថ្ងៃខែ​ឆ្នាំ​កំណើត",
+        label="Date Of Birth",
         required=True,
     )
 
@@ -115,30 +111,30 @@ class PasswordChangeForm(forms.ModelForm):
     )
     oldpassword = forms.CharField(
         max_length=30,
-        label="លេខសំងាត់​ចាស់",
+        label="Old password",
         widget=forms.PasswordInput(
             attrs={
-                "placeholder": "លេខសំងាត់​ចាស់",
+                "placeholder": "OLD PASSWORD",
                 "class": "input-form",
             }
         ),
     )
     password1 = forms.CharField(
         max_length=30,
-        label="ពាក្យសម្ងាត់​ថ្មី",
+        label="New Password",
         widget=forms.PasswordInput(
             attrs={
-                "placeholder": "ពាក្យសម្ងាត់​ថ្មី",
+                "placeholder": "NEW PASSWORD",
                 "class": "input-form",
             }
         ),
     )
     password2 = forms.CharField(
         max_length=30,
-        label="បញ្ជាក់​លេខសំងាត់​ថ្មី",
+        label="Comfirm Password",
         widget=forms.PasswordInput(
             attrs={
-                "placeholder": "បញ្ជាក់​លេខសំងាត់​ថ្មី",
+                "placeholder": "CONFIRM NEW PASSWORD",
                 "class": "input-form",
             }
         ),
@@ -156,6 +152,6 @@ class PasswordChangeForm(forms.ModelForm):
             password2 = self.cleaned_data["password2"]
             user = Account.objects.get(id=user_id)
             if password1 != password2:
-                raise forms.ValidationError("ពាក្យសម្ងាត់មិនត្រូវគ្នាទេ។")
+                raise forms.ValidationError("Passwords don't match")
             if not user.check_password(oldpassword):
-                raise forms.ValidationError("ពាក្យសម្ងាត់ចាស់មិនត្រូវគ្នា។")
+                raise forms.ValidationError("Old password don't match")

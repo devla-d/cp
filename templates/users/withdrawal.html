@@ -1,5 +1,5 @@
 {% extends 'layouts/users.html' %}
-<!---->{% block title %} ដក​មូលនិធិ {% endblock title %}<!---->
+<!---->{% block title %} Withdraw funds {% endblock title %}<!---->
 {% block styles %}
 <style>
   label {
@@ -22,10 +22,10 @@
 </style>
 {% endblock styles %} {% block content %}
 <div class="d-sm-flex align-items-center justify-content-between mb-4">
-  <h1 class="h3 mb-0 text-gray-800">ការដកប្រាក់</h1>
+  <h1 class="h3 mb-0 text-gray-800">Withdrawal</h1>
   <ol class="breadcrumb">
-    <li class="breadcrumb-item"><a href="/">ផ្ទះ</a></li>
-    <li class="breadcrumb-item active" aria-current="page">ការដកប្រាក់</li>
+    <li class="breadcrumb-item"><a href="/">Home</a></li>
+    <li class="breadcrumb-item active" aria-current="page">withdrawal</li>
   </ol>
 </div>
 
@@ -61,7 +61,7 @@
 
       <div id="bankTransferBlock">
         <div class="form-group mt-3">
-          <label for="accountnum">លេខ​គណនី</label>
+          <label for="accountnum">Account Number</label>
           <input
             type="number"
             name="accountnum"
@@ -71,7 +71,7 @@
           />
         </div>
         <div class="form-group mt-3">
-          <label for="accountname">ឈ្មោះ​គណនី</label>
+          <label for="accountname">Account name</label>
           <input
             type="text"
             name="accountname"
@@ -82,7 +82,7 @@
         </div>
 
         <div class="form-group mt-3">
-          <label for="bank">ធនាគារ</label>
+          <label for="bank">Bank</label>
           <input
             type="text"
             name="bank"
@@ -93,7 +93,7 @@
         </div>
       </div>
       <div class="form-group mt-3">
-        <label for="amount">ចំនួនទឹកប្រាក់</label>
+        <label for="amount">Amount</label>
         <input
           type="number"
           name="amount"
@@ -104,11 +104,10 @@
       </div>
       <div class="form-group mt-3">
         <h3 class="text-50">
-          ព័ត៌មានជំនួយ :
+          Tip :
           <small class="text-muted"
-            >ការដកប្រាក់របស់អ្នកនឹងត្រូវបានអនុម័តក្នុងរយៈពេល 6-12 ម៉ោង ធ្វើ
-            ប្រាកដថាអ្នកផ្តល់ព័ត៌មានលម្អិតធនាគារត្រឹមត្រូវ។
-            សមតុល្យបច្ចុប្បន្នរបស់អ្នកគឺ :
+            >Your withdrawal will be approved within a period of 6-12 Hours,Make
+            sure you provide a correct bank details. Your Current Balance Is :
             <span class="text-warning">${{user.balance}}</span>
           </small>
         </h3>

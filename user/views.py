@@ -50,10 +50,10 @@ def withdrawal_(request):
             user.balance -= amount
             user.save()
             transaction.save()
-            messages.success(request, ("ការដកប្រាក់ត្រូវបានដាក់"))
+            messages.success(request, ("Withdrawal Placed !"))
             return redirect("withdrawal")
         else:
-            messages.warning(request, ("ថវិកាមិនគ្រប់គ្រាន់!"))
+            messages.warning(request, ("Insufficient Funds!"))
             return redirect("withdrawal")
 
     return render(request, "users/withdrawal.html")
@@ -74,7 +74,7 @@ def settings_(request):
             u_form = UserUpdateForm(request.POST, instance=user)
             if u_form.is_valid():
                 u_form.save()
-                messages.success(request, ("ធ្វើបច្ចុប្បន្នភាពគណនី!"))
+                messages.success(request, ("Account Updated !"))
                 return redirect("settings_")
         # elif submit == "ChangePassword":
         #     p_form = PasswordChangeForm(request.POST,instance=user)
@@ -85,7 +85,7 @@ def settings_(request):
         #         messages.success(request, f'Password Change')
         #         return redirect('settings_')
         else:
-            messages.warning(request, f"កំហុសដែលមិនស្គាល់បានកើតឡើង!")
+            messages.warning(request, f"UNKNOWN ERROR OCCURED !")
             return redirect("settings_")
 
     else:
@@ -103,10 +103,10 @@ def change_password_view(request):
             password1 = p_form.cleaned_data["password1"]
             user.set_password(password1)
             user.save()
-            messages.success(request, f"ការផ្លាស់ប្តូរពាក្យសម្ងាត់")
+            messages.success(request, f"Password Change")
             return redirect("change_password")
         else:
-            messages.warning(request, f"ពាក្យសម្ងាត់មិនត្រូវគ្នាទេ។")
+            messages.warning(request, f"Passwords don't match")
             return redirect("change_password")
     else:
         p_form = PasswordChangeForm(initial={"user_id": user.id})

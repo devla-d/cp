@@ -116,7 +116,7 @@ other assets."
       }
     </style>
 
-    <!-- <script type="text/javascript">
+    <script type="text/javascript">
       function googleTranslateElementInit() {
         new google.translate.TranslateElement(
           {
@@ -125,12 +125,12 @@ other assets."
           "google_translate_element"
         );
       }
-    </script> -->
+    </script>
 
-    <!-- <script
+    <script
       type="text/javascript"
       src="//translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"
-    ></script> -->
+    ></script>
   </head>
 
   <body class="body-page">
@@ -143,7 +143,7 @@ other assets."
                 <span class="phone"
                   ><i class="fas fa-phone"></i
                   ><a href="tel:PLEASE CONTACT SUPPORT"
-                    >សូមទាក់ទងផ្នែកជំនួយ</a
+                    >PLEASE CONTACT SUPPORT</a
                   ></span
                 >
                 <span class="support"
@@ -205,29 +205,29 @@ other assets."
 
             <div class="collapse navbar-collapse" id="navbarSupportedContent">
               <ul class="navbar-nav main-menu ml-auto mr-2 mr-xl-5">
-                <li><a href="/">ផ្ទះ</a></li>
-                <li><a href="{% url 'plans' %}">ផែនការ</a></li>
-                <li><a href="{% url 'blog' %}">ប្លុក</a></li>
-                <li><a href="{% url 'contact' %}">ទំនាក់ទំនង</a></li>
+                <li><a href="/">Home</a></li>
+                <li><a href="{% url 'plans' %}">Plans</a></li>
+                <li><a href="{% url 'blog' %}">Blog</a></li>
+                <li><a href="{% url 'contact' %}">Contact</a></li>
               </ul>
               <div class="header-action d-flex flex-wrap align-items-center">
                 <a
                   href="{% url 'login' %}"
                   class="btn btn-default website-color mr-1"
-                  >ចូល</a
+                  >Login</a
                 >
                 <a
                   href="{% url 'register' %}"
                   class="btn btn-default website-color mr-1"
-                  >ចុះឈ្មោះ
-                </a>
+                  >Register</a
+                >
               </div>
             </div>
           </nav>
         </div>
       </div>
 
-      <!-- <div id="google_translate_element"></div> -->
+      <div id="google_translate_element"></div>
     </header>
 
     {% block content %} {% endblock content %}
@@ -243,7 +243,7 @@ other assets."
       <div class="modal-dialog" role="document">
         <div class="modal-content">
           <div class="modal-header">
-            <h5 class="modal-title" id="ModalLabel">ត្រូវការចូល</h5>
+            <h5 class="modal-title" id="ModalLabel">Need Sign In</h5>
           </div>
           <form action="https://{{ domain }}/user/plans" method="post">
             <input
@@ -257,7 +257,7 @@ other assets."
                 href="login/index.html"
                 type="button"
                 class="btn btn-success custom-success"
-                >សូមចូលគណនីរបស់អ្នកជាមុនសិន</a
+                >Please, Signin your account at first</a
               >
             </div>
           </form>
@@ -273,11 +273,11 @@ other assets."
               <nav class="navbar navbar-expand-lg p-0">
                 <div class="footer-menu">
                   <ul class="navbar-nav mr-auto">
-                    <li><a href="/"> ផ្ទះ</a></li>
+                    <li><a href="/">Home</a></li>
                     <li>
-                      <a href="{% url 'privacy' %}"> ឯកជនភាព </a>
+                      <a href="{% url 'privacy' %}"> Privacy </a>
                     </li>
-                    <li><a href="{% url 'rules' %}">ច្បាប់</a></li>
+                    <li><a href="{% url 'rules' %}">Rules</a></li>
                   </ul>
                 </div>
               </nav>
@@ -296,8 +296,8 @@ other assets."
             <div class="footer-text mt-4">
               <p>
                 <span style="font-family: 'Open Sans', sans-serif"
-                  >ចូលរួមជាមួយក្រុមនៃក្រុមហ៊ុនកាន់កាប់របស់យើង
-                  ហើយចូលរួមក្នុងការសាងសង់វិនិយោគ</span
+                  >Join the team of our holding company and take part in
+                  investment construction</span
                 ><br />
               </p>
             </div>
@@ -311,8 +311,8 @@ other assets."
         <div class="row">
           <div class="col-lg-9">
             <p>
-              &copy; 2022 {{ domain }} .ដំណើរការដោយ {{ domain }} មានកំណត់ C86883
-              - រក្សា​រ​សិទ្ធ​គ្រប់យ៉ាង
+              &copy; 2022 {{ domain }} . Powered by {{ domain }} Limited C86883
+              - All rights reserved
             </p>
           </div>
           <div class="col-lg-3">
